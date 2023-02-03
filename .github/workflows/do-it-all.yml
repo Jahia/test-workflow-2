@@ -5,6 +5,7 @@ env:
   TARGET_BRANCH: ""
 
 on:
+  workflow_call:
   pull_request:
     types: [ opened, reopened, synchronize ]
   schedule:
