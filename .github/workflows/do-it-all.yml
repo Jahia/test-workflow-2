@@ -112,3 +112,10 @@ jobs:
       - name: Hello World
         run: |
           echo "Hello world"
+
+  jahia-ee:
+    name: "jahia-ee"
+    uses: jahia/test-workflow-3/.github/workflows/do-it-all.yml@main
+    needs: build
+    with:
+      parent_image_tag: "${{needs.build.outputs.image_tag}}"
