@@ -6,6 +6,14 @@ env:
 
 on:
   workflow_call:
+    inputs:
+      parent_image_tag:
+        required: true
+        type: string
+    inputs:
+      parent_image_tag:
+        required: true
+        type: string        
   pull_request:
     types: [ opened, reopened, synchronize ]
   schedule:
