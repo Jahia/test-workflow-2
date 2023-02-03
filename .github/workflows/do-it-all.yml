@@ -10,10 +10,10 @@ on:
       parent_image_tag:
         required: true
         type: string
-    inputs:
       target_branch:
         required: false
-        type: string        
+        default: ''
+        type: string                
   pull_request:
     types: [ opened, reopened, synchronize ]
   schedule:
