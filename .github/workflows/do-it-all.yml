@@ -24,14 +24,14 @@ on:
       - main
       - '/feature-.*/'
       - '/JAHIA-[0-9]-[0-9]-[0-9]-X-BRANCH/'
-  # workflow_dispatch:
-  #   inputs:
-  #     parent_image_tag:
-  #       description: "Tag used by the parent build, 'none' indicates the build has not been triggered from another repository"
-  #       default: 'none'
-  #     target_branch:
-  #       description: 'Target branch for the build step'
-  #       default: ''
+  workflow_dispatch:
+    inputs:
+      parent_image_tag:
+        description: "Tag used by the parent build, 'none' indicates the build has not been triggered from another repository"
+        default: 'none'
+      target_branch:
+        description: 'Target branch for the build step'
+        default: ''
 
 jobs:
   # This trick is necessary to be able to join key variables from all workflow triggers (pr, push, dispatch...)
