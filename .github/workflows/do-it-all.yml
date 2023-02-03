@@ -11,7 +11,7 @@ on:
         required: true
         type: string
     inputs:
-      parent_image_tag:
+      target_branch:
         required: true
         type: string        
   pull_request:
